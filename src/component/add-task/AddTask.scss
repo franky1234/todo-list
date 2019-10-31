@@ -1,0 +1,14 @@
+.task {
+  height: 40px;
+  padding: 5px;
+
+  & input {
+    width: 60%;
+    height: 60%;
+  }
+
+  & button {
+    width: 20%;
+    height: 75%;
+  }
+}
