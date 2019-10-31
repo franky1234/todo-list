@@ -1,2 +1,2 @@
-import TaskManager from './task/Task';
+import TaskManager from './task-manager/TaskManager';
 export { TaskManager };
