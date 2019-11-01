@@ -1,2 +1,3 @@
 import AddTask from './add-task/AddTask';
-export { AddTask };
+import ListTask from './list-task/ListTask';
+export { AddTask, ListTask };

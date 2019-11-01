@@ -1,0 +1,18 @@
+.task-list {
+  list-style-type: none;
+  padding: 5px;
+  text-align: justify;
+  background-color: #FFFFFF;
+  color: #282C34;
+
+  & li {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #E4E4E4;
+    display: inline-block;
+
+    & button {
+      float: right;
+    }
+  }
+}

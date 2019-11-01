@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AddTask } from '../../component/index';
+import { AddTask, ListTask } from '../../component/index';
 
 const TaskManager = () => {
   const [task, setTask] = useState({
@@ -30,12 +30,25 @@ const TaskManager = () => {
     }
   }
 
+  const filterTasks = id => {
+    const { tasks } = task;
+    return tasks.filter(({ key }) => key !== id);
+  }
+
+  const deleteTask = keyId => {
+    const tasks = filterTasks(keyId);
+    setTask({
+      ...task,
+      tasks
+    });
+  }
+
   const { taskToAdd, tasks } = task;
 
   return (
     <div className="task-manager">
       <AddTask task={taskToAdd} updateCallbackTask={updateTask} addCallbackTask={addTask} />
-
+      {tasks.length > 0 ? <ListTask tasks={tasks} deleteCallbackTask={deleteTask} /> : null}
     </div>
   );
 };
